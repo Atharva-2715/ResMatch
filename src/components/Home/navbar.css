@@ -1,0 +1,125 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  z-index: 1000;
+  padding: 0 40px;
+  
+  color: aliceblue;
+}
+
+.title {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: large;
+  font-style: normal;
+  margin-right: auto;
+}
+
+.nav-links {
+  margin-left: 0 auto ;
+  display: flex; /* 🔥 Align items in a single line */
+  gap: 80px; /* Adjust spacing between buttons */
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.ul {
+  display: flex; /* 🔥 Make items inline */
+  gap: 55px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.li {
+  margin: 0;
+}
+
+.button {
+  background-color: transparent;
+  font-family: sans-serif;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap; /* Prevent text wrapping inside buttons */
+  width: auto;
+  text-decoration: none;
+}
+
+.button .p {
+  z-index: 2;
+  position: relative;
+  margin: 0;
+}
+
+/* 🔥 New animated underline effect */
+.button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -10px; /* Start 10px to the left */
+  width: 0;
+  height: 3px;
+  background-color: rgb(236, 232, 231);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.button:hover::before {
+  width: calc(100% + 20px); /* Extend 10px on each side */
+}
+
+.button:hover {
+  box-shadow: none;
+}
+
+/* Optional click effect */
+.button:active {
+  transform: scale(0.95);
+}
+
+
+.login-btn {
+  margin-left: auto; /* Push to the right */
+}
+
+.btn {
+  
+  width: 130px;
+  height: 40px;
+  font-size: 1.1em;
+  cursor: pointer;
+  background-color: #171717;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  border-radius: 5px;
+  transform: translateY(-10px);
+  box-shadow: 0 7px 0 -2px #e7e4e4, 0 15px 0 -4px #e2e3e4,
+    0 16px 10px -3px #f1f3f4;
+}
+
+.btn:active {
+  transition: all 0.2s;
+  transform: translateY(-5px);
+  box-shadow: 0 2px 0 -2px #e7e5e5, 0 8px 0 -4px #c3c6c8,
+    0 12px 10px -3px #d8dadb;
+}

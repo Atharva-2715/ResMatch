@@ -1,0 +1,115 @@
+.contact-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    color: #fff; /* White text */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.contact-title{
+    font-size: 50px !important; /* Increased font size */
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #fff; /* Pure white */
+    animation: fadeSlideDown 1s ease-out;
+    
+}
+
+@keyframes fadeSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #ccc; /* Light gray text */
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #999; /* Medium gray highlight */
+    font-weight: bold;
+}
+
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.contact-card {
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+   
+    
+    color: #fff;
+    
+}
+
+
+.contact-card:hover {
+    animation: none; /* prevent re-triggering entrance animation */
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(200, 200, 200, 0.4),
+                0 0 30px rgba(180, 180, 180, 0.2);
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+    border-color: #555;
+}
+
+
+
+.contact-icon {
+    margin-bottom: 10px;
+    color: #999;
+}
+
+.contactme-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.contact-content a {
+    color: #ccc;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.contact-content a:hover {
+    color: white;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
