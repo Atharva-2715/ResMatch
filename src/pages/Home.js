@@ -7,6 +7,7 @@ import ContactMe from '../components/Home/contactMe';
 
 
 
+
 const Home = () => {
 
     useEffect(() => {
@@ -30,7 +31,6 @@ const Home = () => {
         return () => observer.disconnect();
       }, []);
 
-      
     return (
         <div className="home">
         <Navbar />

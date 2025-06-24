@@ -1,6 +1,13 @@
 import "./hero.css";
+import { useNavigate } from "react-router-dom";
 
-const hero = () => {
+const Hero = () => {
+
+  const navigate = useNavigate();
+  
+  const handleLoginClick = () => {
+      navigate("/login");
+  };
   return (
     <section className="hero" id="home">
       <div className="hero-title">
@@ -18,7 +25,7 @@ const hero = () => {
       </div>
 
       <div className="hero-button">
-<button type="button" class="glow-on-hover">
+<button onClick={handleLoginClick} type="button" class="glow-on-hover">
   Get Started
 </button>
       </div>
@@ -26,4 +33,4 @@ const hero = () => {
   );
 };
 
-export default hero;
+export default Hero;
