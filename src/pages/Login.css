@@ -6,11 +6,11 @@
 
 .logo-container {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-top: 27%;
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   background: linear-gradient(45deg, #f5f5f5, #e0e0e0, #c0c0c0);
   -webkit-background-clip: text;
@@ -34,7 +34,7 @@
 }
 
 .tagline {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #ccc;
   margin-top: 0.5rem;
 }
@@ -71,7 +71,7 @@
 }
 
 .form {
-  width: 400px;
+  width: 800px;
   padding: 2rem;
   background: rgba(33, 33, 33, 0.9);
   border-radius: 10px;
@@ -198,7 +198,7 @@
     font-family: monospace;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
   }
 .block-cube {
@@ -359,4 +359,53 @@
 
 .success {
   border-color: #44ff44 !important;
+}
+
+.horizontal-form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.horizontal-form .logo-container {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.horizontal-form .form-content {
+  width: 60%;
+}
+
+.signup-form .form-header,
+.signup-form .social-login,
+.signup-form .form-footer {
+  margin-bottom: 1rem; /* reduce spacing below sections */
+}
+
+.signup-form .btn {
+  margin-top: 1rem;
+}
+
+.signup-form input {
+  padding: 10px 14px; /* slightly more compact */
+}
+
+
+@media (max-width: 768px) {
+  .horizontal-form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .horizontal-form .logo-container,
+  .horizontal-form .form-content {
+    width: 100%;
+    text-align: center;
+  }
 }
