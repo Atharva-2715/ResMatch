@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
+
 
 const EnhancedLoginForm = () => {
+
+  const navigate = useNavigate();
+  
+    const handleLoginClick = () => {
+      navigate("/dashboard");
+    };
+
   const [isSignUp, setIsSignUp] = useState(false);
   const [formData, setFormData] = useState({
     username: "",
@@ -221,7 +230,7 @@ const EnhancedLoginForm = () => {
               </div>
             )}
 
-            <button type="submit" className="btn block-cube block-cube-hover">
+            <button onClick={handleLoginClick} type="submit" className="btn block-cube block-cube-hover">
               <div className="bg-top">
                 <div className="bg-inner"></div>
               </div>
