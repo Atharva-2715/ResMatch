@@ -8,6 +8,6 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
     margin: 0;
-    font-family: sans-serif; /* optional */
+    font-family: 'Roboto', sans-serif;
   }
   

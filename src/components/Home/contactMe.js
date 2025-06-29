@@ -1,5 +1,5 @@
 import './contactMe.css';
-import { Mail, Github, Linkedin, MapPin, Send, MessageCircle } from 'lucide-react';
+import { Mail, Github, Linkedin, MapPin } from 'lucide-react';
 
 
 const contactMe = () => {

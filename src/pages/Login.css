@@ -9,7 +9,7 @@
   margin-top: 27%;
 }
 
-.logo {
+.logo { 
   font-size: 3rem;
   font-weight: bold;
   background: linear-gradient(45deg, #f5f5f5, #e0e0e0, #c0c0c0);
@@ -272,6 +272,7 @@
 .block-cube.block-input input:focus ~ .bg .bg-inner {
   top: 100%;
   background: rgba(255, 255, 255, 0.5);
+  
 }
 
 .block-cube.block-input .bg-top,
@@ -290,11 +291,13 @@
 .block-cube.block-input:hover .bg-top,
 .block-cube.block-input:hover .bg-right {
   background: rgba(255, 255, 255, 0.8);
+  
 }
 
 .block-cube-hover:hover .bg .bg-inner,
 .block-cube-hover:focus .bg .bg-inner {
   top: 100%;
+  
 }
 
 .social-login {
@@ -385,7 +388,7 @@
 .signup-form .form-header,
 .signup-form .social-login,
 .signup-form .form-footer {
-  margin-bottom: 1rem; /* reduce spacing below sections */
+  margin-bottom: 1rem;
 }
 
 .signup-form .btn {
@@ -393,7 +396,7 @@
 }
 
 .signup-form input {
-  padding: 10px 14px; /* slightly more compact */
+  padding: 10px 14px; 
 }
 
 
@@ -408,4 +411,9 @@
     width: 100%;
     text-align: center;
   }
+}
+
+.btn.block-cube.block-cube-hover:hover .text {
+  color: black;
+  transition: color 0.3s ease;
 }

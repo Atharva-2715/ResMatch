@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="title">
+      <div className="heading-container">
         <h2>ResMatch</h2>
       </div>
 
