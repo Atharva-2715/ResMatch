@@ -34,7 +34,13 @@
   transform: translateY(-50%);
   width: 4px;
   height: 0px;
-  background: linear-gradient(180deg, #ff6b6b, #4ecdc4, #45b7d1);
+  background:  linear-gradient(45deg, 
+  #ff6b6b, 
+  #4ecdc4, 
+  #45b7d1, 
+  #8a2be2, 
+  #ff6b6b
+);;
   border-radius: 2px;
   animation: pulse 2s ease-in-out infinite;
 }
@@ -92,11 +98,11 @@
 .li {
   margin: 0;
 }
-
-.button {
+/* Updated button styles with left-to-right underline animation */
+.button1 {
   background-color: transparent;
   font-family: sans-serif;
-  color: white;
+  color: #eaeaea;
   border: none;
   font-size: 16px;
   font-weight: 700;
@@ -106,43 +112,87 @@
   text-align: center;
   z-index: 1;
   overflow: hidden;
-  white-space: nowrap; /* Prevent text wrapping inside buttons */
+  white-space: nowrap;
   width: auto;
   text-decoration: none;
+  transition: color 0.3s ease;
+  backdrop-filter: blur(4px);
 }
 
-.button .p {
+.button1 .p {
   z-index: 2;
   position: relative;
   margin: 0;
 }
 
-.button::before {
+/* Magnetic hover effect for buttons */
+.button1 {
+  background-color: transparent;
+  font-family: sans-serif;
+  color: #eaeaea;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  width: auto;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+}
+
+.button1 .p {
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+/* Magnetic glow effect */
+.button1::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: -10px; /* Start 10px to the left */
-  width: 0;
-  height: 3px;
-  background-color: rgb(236, 232, 231);
-  transition: width 0.3s ease;
-  z-index: -1;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(78, 205, 196, 0.15) 0%, transparent 70%);
+  opacity: 0;
+  transition: all 0.4s ease;
+  border-radius: 8px;
+  transform: scale(0.8);
 }
 
-.button:hover::before {
-  width: calc(100% + 20px); /* Extend 10px on each side */
-}
-
-.button:hover {
-  box-shadow: none;
+.button1:hover {
+  transform: translateY(-3px) scale(1.02);
+  color: #edf2f2;
+  text-shadow: 0 0 10px rgba(178, 182, 181, 0.3);
 }
 
 
-.button:active {
-  transform: scale(0.95);
+
+.button1:hover .p {
+  transform: translateY(-1px);
 }
 
+/* List item magnetic effect */
+.li {
+  margin: 0;
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
 
+.li:hover {
+  transform: translateY(-2px);
+}
+
+/* Remove the old li:hover rule */
+/* .li:hover {
+  background-color: white;
+  border-radius: 50%;
+} */
 .login-btn {
   margin-left: auto; /* Push to the right */
 }

@@ -3,7 +3,7 @@ import './Home.css';
 import Navbar from '../components/Home/navbar';
 import Hero from '../components/Home/hero';
 import AboutMe from '../components/Home/aboutMe';
-import ContactMe from '../components/Home/contactMe';
+import HowItWorks from '../components/Home/howItWorks';
 
 
 
@@ -43,8 +43,8 @@ const Home = () => {
           <AboutMe />
         </section>
       
-        <section className="section zoom-in" id="contact" >
-          <ContactMe />
+        <section className="section zoom-in" id="how-it-works" >
+          <HowItWorks />
         </section>
       </div>
       

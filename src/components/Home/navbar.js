@@ -18,18 +18,18 @@ const Navbar = () => {
       <div className="nav-links">
         <ul className="ul">
           <li className="li">
-            <a className="button" href="#home">
+            <a className="button1" href="#home">
               <p className="p">Home</p>
             </a>
           </li>
           <li className="li">
-            <a className="button" href="#about">
+            <a className="button1" href="#about">
               <p className="p">About Me</p>
             </a>
           </li>
           <li className="li">
-            <a className="button" href="#contact">
-              <p className="p">Contact Me</p>
+            <a className="button1" href="#how-it-works">
+              <p className="p"> How it Works</p>
             </a>
           </li>
         </ul>

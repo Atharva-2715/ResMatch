@@ -85,7 +85,7 @@ const EnhancedLoginForm = () => {
       <style>{`
 
       `}</style>
-
+  
       <div className={`form horizontal-form ${isSignUp ? "signup-form" : ""}`}>
         <div className="logo-container">
           <div className="logo">ResMatch</div>
