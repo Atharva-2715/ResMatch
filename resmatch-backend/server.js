@@ -1,4 +1,6 @@
 const express = require("express");
+const cors = require("cors");
+
 // Remove the node-fetch import since we'll use built-in fetch
 require("dotenv").config();
 
@@ -6,6 +8,11 @@ const app = express();
 const port = 8000;
 
 app.use(express.json());
+
+app.use(cors({
+  origin: "https://resmatch-u3b6.onrender.com", // Frontend domain
+  credentials: true
+}));
 
 // Check if API key is loaded
 console.log("🔑 GROQ_API_KEY loaded:", process.env.GROQ_API_KEY ? "✅ Yes" : "❌ No");
