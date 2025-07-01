@@ -8,6 +8,9 @@ import logout from "../assests/logout.png";
 import settings from "../assests/setting.png";
 import upload from "../assests/upload.png";
 
+const API_URL = process.env.REACT_APP_API_URL; //used only for production.
+
+
 const Dashboard = () => {
   const fileInputRef = useRef(null);
   const [fileName, setFileName] = useState("");
@@ -288,7 +291,7 @@ const Dashboard = () => {
 
     try {
       console.log("👉 Fetching /api/analyze");
-      const response = await fetch("/api/analyze", {
+      const response = await fetch(`${API_URL}/analyze`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
