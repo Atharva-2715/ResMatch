@@ -10,7 +10,7 @@ const port = 8000;
 app.use(express.json());
 
 app.use(cors({
-  origin: "https://res-match.vercel.app/",
+  origin: "*",
   credentials: true
 }));
 
