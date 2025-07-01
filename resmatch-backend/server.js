@@ -10,9 +10,10 @@ const port = 8000;
 app.use(express.json());
 
 app.use(cors({
-  origin: "https://resmatch-u3b6.onrender.com", // Frontend domain
+  origin: "https://res-match.vercel.app/",
   credentials: true
 }));
+
 
 // Check if API key is loaded
 console.log("🔑 GROQ_API_KEY loaded:", process.env.GROQ_API_KEY ? "✅ Yes" : "❌ No");
