@@ -9,10 +9,22 @@ const port = 8000;
 
 app.use(express.json());
 
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://res-match.vercel.app"
+];
+
 app.use(cors({
-  origin: "*",
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
+
 
 
 // Check if API key is loaded
